@@ -11,11 +11,12 @@ encode_dict = {
     'owner': {'First Owner': 1, 'Second Owner': 2, 'Third Owner': 3, 'Fourth & Above Owner': 4, 'Test Drive Car': 5}    
 }
 
-model = joblib.load('ML_OPS_Day_2/car_price_model.pkl')
+
 
 import joblib
-# model = joblib.load('car_price_model.pkl')
+#model = joblib.load('car_price_model.pkl')
 
+model = joblib.load('ML_OPS_Day_2/car_price_model.pkl')
 # Eneter the details of the car
 
 year = st.slider("Year of Manufacture", min_value=1990, max_value=2025, value=2015  , step=1 )
@@ -39,6 +40,8 @@ engine = col2.number_input("Engine (cc)", min_value=800, max_value=5000, value=1
 max_power = st.number_input("Max Power (bhp)", min_value=0.0, max_value=300.0, value=150.0, step=5.0) 
 
 seats = st.number_input("Number of Seats", min_value=2, max_value=10, value=5, step=1)  
+
+#scaler = joblib.load('scaler.pkl')
 
 scaler = joblib.load('ML_OPS_Day_2/scaler.pkl')
 
